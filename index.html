@@ -1,141 +1,412 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Renzo, desarrollador web freelance. Diseño y desarrollo de páginas web modernas.">
-    <title>Renzo | Desarrollador Web</title>
+
+    <meta name="description" content="Desarrollo web freelance: sitios modernos, funcionales y adaptables para negocios y emprendimientos.">
+
+    <meta name="theme-color" content="#0d1117">
+
+    <title>Renzo. | Desarrollo Web</title>
+
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
+    <!-- ENCABEZADO -->
     <header class="header">
-        <a href="#inicio" class="logo">Renzo<span>.</span></a>
+        <nav class="navbar container" aria-label="Navegación principal">
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio" class="logo" aria-label="Ir al inicio">
+                Renzo<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Herramientas</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
         </nav>
     </header>
 
     <main>
-        <section class="hero" id="inicio">
-            <p class="etiqueta">DESARROLLADOR WEB FREELANCE</p>
 
-            <h1>Creo páginas web<br>
-                <span>modernas y funcionales.</span>
-            </h1>
+        <!-- PRESENTACIÓN -->
+        <section class="hero container" id="inicio">
 
-            <p class="descripcion">
-                Ayudo a negocios y emprendedores a tener presencia
-                en internet con páginas web atractivas, rápidas y
-                adaptadas a celulares.
-            </p>
+            <div class="hero-content">
+                <p class="eyebrow">DESARROLLO WEB FREELANCE</p>
 
-            <div class="botones">
-                <a href="#proyectos" class="btn principal">
-                    Ver mis proyectos
+                <h1>
+                    Transformo tus ideas
+                    en <span>experiencias digitales.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Diseño y desarrollo soluciones digitales para
+                    negocios y emprendimientos que quieren tener
+                    su propio espacio en internet.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">
+                        Ver mis proyectos
+                    </a>
+
+                    <a href="#contacto" class="btn btn-secondary">
+                        Hablemos
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    Compromiso, prolijidad y atención al detalle.
+                </div>
+            </div>
+
+            <!-- CARRUSEL DE PROGRAMACIÓN -->
+            <div
+                class="hero-carousel"
+                id="hero-carousel"
+                role="region"
+                aria-label="Galería de imágenes de desarrollo"
+                aria-roledescription="carrusel"
+            >
+
+                <div class="carousel-track">
+
+                    <article class="carousel-slide is-active">
+                        <img
+                            src="https://www.aixiamo.com/assets/static/images/geo-editorial/codex-workflow-editorial-photo-20260716.webp"
+                            alt="Desarrollador trabajando con código en una computadora portátil"
+                            fetchpriority="high"
+                        >
+
+                        <div class="slide-overlay">
+                            <span class="slide-label">01 / DESARROLLO</span>
+                            <h2>Del código a la idea.</h2>
+                            <p>Cada detalle cuenta.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide">
+                        <img
+                            src="https://anadatech.com/assets/hero-slide-1.png"
+                            alt="Espacio de trabajo con una computadora portátil y un monitor con código"
+                            loading="lazy"
+                        >
+
+                        <div class="slide-overlay">
+                            <span class="slide-label">02 / TECNOLOGÍA</span>
+                            <h2>Soluciones digitales.</h2>
+                            <p>Diseño y funcionalidad.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide">
+                        <img
+                            src="https://engineering-technology.brexa.com/img/hatasupo/development-engineer/img_dev_01.jpg"
+                            alt="Programador desarrollando software frente a dos pantallas"
+                            loading="lazy"
+                        >
+
+                        <div class="slide-overlay">
+                            <span class="slide-label">03 / CREACIÓN</span>
+                            <h2>Ideas que toman forma.</h2>
+                            <p>Un proyecto a la vez.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <button
+                    class="carousel-arrow carousel-prev"
+                    type="button"
+                    aria-label="Imagen anterior"
+                >
+                    &#10094;
+                </button>
+
+                <button
+                    class="carousel-arrow carousel-next"
+                    type="button"
+                    aria-label="Imagen siguiente"
+                >
+                    &#10095;
+                </button>
+
+                <div class="carousel-bottom">
+                    <div
+                        class="carousel-dots"
+                        aria-label="Seleccionar imagen"
+                    >
+                        <button class="carousel-dot is-active"
+                            type="button"
+                            aria-label="Mostrar imagen 1"
+                            aria-current="true"></button>
+
+                        <button class="carousel-dot"
+                            type="button"
+                            aria-label="Mostrar imagen 2"></button>
+
+                        <button class="carousel-dot"
+                            type="button"
+                            aria-label="Mostrar imagen 3"></button>
+                    </div>
+
+                    <span class="carousel-counter" aria-live="polite">
+                        01 / 03
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section class="section container" id="sobre-mi">
+
+            <div class="section-heading">
+                <p class="eyebrow">MI FORMA DE TRABAJAR</p>
+                <h2>Sobre mí</h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    Me interesa la tecnología, la programación y el diseño
+                    de soluciones que realmente sean útiles. Disfruto
+                    aprender, resolver problemas y convertir ideas en
+                    proyectos concretos.
+                </p>
+
+                <p>
+                    En cada trabajo priorizo la organización, la prolijidad
+                    y la responsabilidad. Presto atención a los detalles,
+                    busco que cada página sea fácil de usar y cuido la
+                    comunicación durante el desarrollo.
+                </p>
+
+                <p>
+                    Mi objetivo es seguir creciendo como desarrollador
+                    y construir soluciones que respondan a las necesidades
+                    reales de cada cliente.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- HABILIDADES Y HERRAMIENTAS -->
+        <section class="section section-alt" id="habilidades">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">TECNOLOGÍA Y APRENDIZAJE</p>
+                    <h2>Mis habilidades y herramientas</h2>
+
+                    <p class="section-description">
+                        Tecnologías y herramientas que utilizo en mis
+                        proyectos y continúo desarrollando.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <span class="skill-number">01</span>
+                        <h3>HTML5</h3>
+                        <p>Estructura y organización de páginas web.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">02</span>
+                        <h3>CSS3</h3>
+                        <p>Diseño visual, estilos y adaptación de pantallas.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">03</span>
+                        <h3>JavaScript</h3>
+                        <p>Interactividad y funcionalidades dinámicas.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">04</span>
+                        <h3>Bootstrap</h3>
+                        <p>Componentes y herramientas para interfaces.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">05</span>
+                        <h3>Python</h3>
+                        <p>Programación y desarrollo de soluciones.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">06</span>
+                        <h3>GitHub</h3>
+                        <p>Publicación y organización de proyectos.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-number">07</span>
+                        <h3>Visual Studio Code</h3>
+                        <p>Entorno de trabajo para escribir y organizar código.</p>
+                    </article>
+
+                    <article class="skill-card skill-more">
+                        <span class="skill-number">08</span>
+                        <h3>Y mucho más</h3>
+                        <p>Siempre explorando nuevas tecnologías y posibilidades.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="section container" id="proyectos">
+
+            <div class="section-heading">
+                <p class="eyebrow">TRABAJOS Y DEMOSTRACIONES</p>
+                <h2>Mis proyectos</h2>
+
+                <p class="section-description">
+                    Proyectos en los que aplico mis conocimientos
+                    para resolver necesidades concretas.
+                </p>
+            </div>
+
+            <article class="project-card">
+
+                <a
+                    class="project-image"
+                    href="https://srviviani.github.io/barberia-demo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visitar el proyecto Norte Barbería"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85"
+                        alt="Interior de una barbería"
+                        loading="lazy"
+                    >
+
+                    <span class="project-image-label">
+                        PROYECTO 01
+                    </span>
                 </a>
 
-                <a href="#contacto" class="btn secundario">
-                    Contactarme
-                </a>
-            </div>
-        </section>
+                <div class="project-content">
 
-        <section class="seccion" id="sobre-mi">
-            <p class="etiqueta">CONOCEME</p>
-            <h2>Sobre mí</h2>
+                    <p class="project-type">SITIO WEB PARA NEGOCIO</p>
 
-            <p class="texto">
-                Soy Renzo, desarrollador web en formación y
-                freelancer. Me interesa crear soluciones digitales
-                que sean útiles, fáciles de usar y visualmente
-                atractivas. Actualmente estoy construyendo mi
-                experiencia mediante proyectos prácticos.
-            </p>
-        </section>
-
-        <section class="seccion" id="habilidades">
-            <p class="etiqueta">LO QUE ESTOY APRENDIENDO</p>
-            <h2>Mis habilidades</h2>
-
-            <div class="habilidades">
-                <article class="tarjeta">
-                    <h3>HTML5</h3>
-                    <p>Estructura y contenido de páginas web.</p>
-                </article>
-
-                <article class="tarjeta">
-                    <h3>CSS3</h3>
-                    <p>Diseño visual, estilos y adaptación a celulares.</p>
-                </article>
-
-                <article class="tarjeta">
-                    <h3>Diseño responsive</h3>
-                    <p>Interfaces que se adaptan a distintas pantallas.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="seccion" id="proyectos">
-            <p class="etiqueta">MI TRABAJO</p>
-            <h2>Proyectos destacados</h2>
-
-            <article class="proyecto">
-                <div class="proyecto-info">
-                    <span class="numero">PROYECTO 01</span>
-                    <h3>Web para barbería</h3>
+                    <h3>Norte Barbería</h3>
 
                     <p>
-                        Una página web para una barbería con diseño
-                        adaptable, galería de trabajos, información
-                        del negocio y acceso directo a WhatsApp.
+                        Una página de demostración para una barbería,
+                        con galería de trabajos, información del negocio,
+                        horarios, ubicación y acceso al contacto por WhatsApp.
                     </p>
 
-                    <div class="tecnologias">
+                    <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <span>Responsive</span>
+                        <span>Diseño adaptable</span>
                     </div>
 
                     <a
+                        class="project-link"
                         href="https://srviviani.github.io/barberia-demo/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="enlace-proyecto"
                     >
-                        Ver demostración ↗
+                        Explorar proyecto <span aria-hidden="true">↗</span>
                     </a>
+
                 </div>
+
             </article>
-        </section>
 
-        <section class="contacto" id="contacto">
-            <p class="etiqueta">¿TENÉS UN PROYECTO?</p>
-            <h2>Hagamos algo juntos.</h2>
-
-            <p>
-                Estoy abierto a nuevos proyectos y oportunidades
-                para seguir creciendo como desarrollador web.
+            <p class="projects-note">
+                Este portfolio también seguirá creciendo con nuevos proyectos.
             </p>
 
-            <a
-                href="https://wa.me/3458415746"
-                class="btn principal"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Contactarme por WhatsApp
-            </a>
         </section>
+
+        <!-- CONTACTO -->
+        <section class="section section-alt" id="contacto">
+
+            <div class="container contact-content">
+
+                <p class="eyebrow">HAGAMOS ALGO JUNTOS</p>
+
+                <h2>¿Tenés un proyecto en mente?</h2>
+
+                <p>
+                    Puedo ayudarte a convertir esa idea en una página web
+                    para tu negocio, emprendimiento o proyecto personal.
+                    Contame qué tenés en mente y hablemos sobre cómo hacerlo realidad.
+                </p>
+
+                <a
+                    class="btn btn-primary contact-button"
+                    href="https://wa.me/5493458415746"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Hablemos de tu proyecto <span aria-hidden="true">↗</span>
+                </a>
+
+                <p class="contact-note">
+                    Cada proyecto empieza con una buena conversación.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>© 2026 Renzo. Desarrollado con HTML y CSS.</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#inicio" class="footer-brand">
+                Renzo Bhuda
+            </a>
+
+            <p>Desarrollador web freelance · 2026</p>
+
+            <p class="copyright">
+                © <span id="current-year">2026</span>
+                Renzo Bhuda. Todos los derechos reservados.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
